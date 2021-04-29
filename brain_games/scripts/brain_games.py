@@ -1,8 +1,13 @@
 #!/usr/bin/env python
+"""Brain Games main executable."""
 
-def welcome():
-    print('Welcome to the Brain Games!')
+from brain_games import cli
+
+
+def main():
+    """Run Brain Games."""
+    cli.welcome_user()
 
 
 if __name__ == '__main__':
-    welcome()
+    main()
