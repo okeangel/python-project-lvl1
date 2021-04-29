@@ -1,4 +1,4 @@
-name: Check the package
+name: wemake-python-styleguide
 
 on: [push]
 
