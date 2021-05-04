@@ -1,12 +1,19 @@
 .PHONY: install brain-games build publish package-install lint
 
+check: lint build package-install
+
+release: check
+	poetry version minor
+	git status
+
 install:
 	poetry install
 
-brain-games:
-	poetry run brain-games
+lint:
+	poetry run flake8 brain_games
 
 build:
+	poetry version patch
 	poetry build
 
 publish:
@@ -14,6 +21,9 @@ publish:
 
 package-install:
 	python3 -m pip install --user dist/*.whl
+	rm dist/*.whl
+	rm dist/*.tar.gz
 
-lint:
-	poetry run flake8 brain_games
+brain-games:
+	poetry run brain-games
+
