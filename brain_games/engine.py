@@ -15,16 +15,13 @@ def welcome_user() -> str:
     return name
 
 
-def play(get_a_question, description: str, rounds: int = 3):
+def play(game, rounds: int = 3):
     """Play several identical rounds of the game.
 
     Args:
-        get_a_question: A function to generate a pair of
-            (question: str, correct_answer: str).
+        game: a complete module with special attributes.
 
-        description: Tell about mission and how to win.  # noqa: DAR101
-
-        rounds: Maximum number of rounds. Game will end
+        rounds: Maximum number of rounds. Game will end  # noqa: DAR101
             when player fails a round, or when player reach
             the maximum of rounds.
 
@@ -32,10 +29,10 @@ def play(get_a_question, description: str, rounds: int = 3):
         None.
     """
     player_name = welcome_user()
-    print(description)
+    print(game.DESCRIPTION)
 
     while rounds:
-        question, correct_answer = get_a_question()
+        question, correct_answer = game.generate_question()
         print('Question: {0}'.format(question))
 
         answer = prompt.string('Your answer: ')

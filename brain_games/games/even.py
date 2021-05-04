@@ -1,16 +1,13 @@
-#!/usr/bin/env python
 """Parity Check game."""
 
 import random
-
-from brain_games import game_flow
 
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 MAX_NUMBER_IN_CALCULATION = 99
 
 
-def generate_a_question():
-    """Generate the question.
+def generate_question():
+    """Generate a question.
 
     Returns:
         Tuple(question: str, correct_answer: str).
@@ -22,12 +19,3 @@ def generate_a_question():
         correct_answer = 'no'
 
     return question, correct_answer
-
-
-def main():
-    """Process the game."""
-    game_flow.play(generate_a_question, DESCRIPTION)
-
-
-if __name__ == '__main__':
-    main()
