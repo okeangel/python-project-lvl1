@@ -29,7 +29,7 @@ def generate_question():
     """
     progression = generate_progression()  # noqa: S311
 
-    position = randint(0, len(progression))  # noqa: S311
+    position = randint(0, len(progression) - 1)  # noqa: S311
     correct_answer = progression[position]
     progression[position] = '..'
 
