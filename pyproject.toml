@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "python-project-lvl1-by-okeangel"
-version = "0.4.0"
+version = "0.5.1"
 description = "A Hexlet Python Course lvl1 project"
 authors = ["Alex Sweetall <okeangel@gmail.com>"]
 packages = [
