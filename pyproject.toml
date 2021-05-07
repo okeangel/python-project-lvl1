@@ -3,8 +3,8 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "python-project-lvl1-by-okeangel"
-version = "0.5.1"
+name = "hexlet-code"
+version = "0.5.2"
 description = "A Hexlet Python Course lvl1 project"
 authors = ["Alex Sweetall <okeangel@gmail.com>"]
 packages = [
